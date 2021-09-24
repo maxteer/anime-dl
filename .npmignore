@@ -1,0 +1,6 @@
+src/
+/utils/
+
+*.tgz
+*.mp4
+yarn.lock
