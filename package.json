@@ -1,0 +1,44 @@
+{
+  "name": "anime-dl",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "author": "ryanlvc",
+  "bin": {
+    "anime-dl": "dist/index.js"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "start": "node .",
+    "test": "babel-node -x .ts ./test/index.ts",
+    "build": "node ./utils/cleaner && babel --extensions \".ts,.js\" src --out-dir dist"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^8.2.0",
+    "inquirer": "^8.1.5",
+    "ora": "4.0.0",
+    "puppeteer": "^10.4.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/inquirer": "^8.1.2",
+    "@types/node": "^16.9.6",
+    "@types/request": "^2.48.7",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  }
+}
