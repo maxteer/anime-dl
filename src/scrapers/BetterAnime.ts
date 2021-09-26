@@ -1,11 +1,9 @@
 import {Scraper} from '~/types'
 
-import {
-  createBrowser,
-  calcDownloadLink,
-  fetchEpisodes,
-  searchAnimes,
-} from './betteranime'
+import calcDownloadLink from './betteranime/calcDownloadLink'
+import createBrowser from './betteranime/createBrowser'
+import fetchEpisodes from './betteranime/fetchEpisodes'
+import searchAnimes from './betteranime/searchAnimes'
 
 export const name = 'betteranime'
 
