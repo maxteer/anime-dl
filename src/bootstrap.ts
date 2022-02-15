@@ -14,7 +14,8 @@ function downloadEpisode(
   {url, quality, episode}: EpisodeMirror,
 ) {
   const episodeNumber = episode.number.toString().padStart(2, '0')
-  const name = `${episodeNumber} ${episode.anime.name} ${quality}.mp4`
+  const filteredName = episode.anime.name.replace(/[^\w\s]+/g, '')
+  const name = `${episodeNumber} ${filteredName} ${quality}.mp4`
   return new Promise<void>((resolve, reject) =>
     request(url)
       .on('response', response => {
